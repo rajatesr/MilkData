@@ -8,5 +8,9 @@ namespace MilkData.ViewModels
     public class UserEntryViewodel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+
+        String d = "";
+
+
     }
 }
