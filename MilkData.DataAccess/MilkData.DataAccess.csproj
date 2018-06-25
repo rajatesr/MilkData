@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MilkData.Business\MilkData.Business.csproj" />
+    <ProjectReference Include="..\MilkData.Models\MilkData.Models.csproj" />
+  </ItemGroup>
+
 </Project>

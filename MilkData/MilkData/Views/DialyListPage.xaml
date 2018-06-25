@@ -1,6 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MilkData.Views.DialyListPage" Title="List" NavigationPage.HasNavigationBar="False">
+             x:Class="MilkData.Views.DialyListPage" 
+             Title="List" NavigationPage.HasNavigationBar="False">
+
+    <ListView x:Name="DialyList" Margin="5" HasUnevenRows="False" SeparatorColor="LightBlue">
+        <ListView.Header>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="6*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Number" Grid.Column="0" HorizontalOptions="Center" />
+                <Label Text="Name" Grid.Column="1" HorizontalOptions="Center"/>
+                <Label Text="Morning" Grid.Column="2" HorizontalOptions="Center"/>
+                <Label Text="Night" Grid.Column="3" HorizontalOptions="Center"/>
+            </Grid>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <ViewCell.View>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2*"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label Text="{Binding Number}" HorizontalOptions="Center" Grid.Column="0"/>
+                            <Label Text="{Binding Name}" Grid.Column="1" HorizontalOptions="Center"/>
+                            <Label Text="{Binding Morning}" HorizontalOptions="Center" Grid.Column="2"/>
+                            <Label Text="{Binding Night}" HorizontalOptions="Center" Grid.Column="3"/>
+                        </Grid>
+                    </ViewCell.View>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
   
 </ContentPage>
